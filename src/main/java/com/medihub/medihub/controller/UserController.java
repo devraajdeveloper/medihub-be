@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/users")
+@RequestMapping("users")
 public class UserController {
     private UserService userService;
 
@@ -24,7 +24,7 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @PostMapping
+    @PostMapping("add")
     public User saveUser(@RequestBody User user) {
         return userService.saveUser(user);
     }

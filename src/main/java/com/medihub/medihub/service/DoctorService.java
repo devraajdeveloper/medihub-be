@@ -69,4 +69,8 @@ public class DoctorService {
             throw new RuntimeException("Doctor not found with id: " + doctorId);
         }
     }
+
+    public List<Doctor> getDoctorsBySpecialization(String specializationName) {
+        return doctorRepository.findBySpecializationName(specializationName);
+    }
 }
